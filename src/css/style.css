@@ -6,6 +6,7 @@ img {
   width: 100%;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: transparent;
 }
 .search-form {
 }
@@ -17,6 +18,10 @@ img {
   cursor: pointer;
   box-shadow: 1px 1px 3px 2px rgba(26, 106, 234, 0.424);
 }
+.btn:hover {
+    background-color: lightgreen;
+
+}
 .search-input {
   display: flex;
   gap: 15px;
@@ -26,12 +31,13 @@ img {
 }
 .input {
   padding: 5px 15px;
-  border: 1px solid black;
+  border: 1px solid  black;
   border-radius: 5px;
   box-shadow: 1px 1px 3px 2px rgba(29, 29, 144, 0.424);
   min-width: 250px;
   outline: none;
 }
+
 .js-search-form {
 }
 .gallery {
@@ -55,7 +61,7 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: transparent;
+  background-color: lightgreen;
   box-shadow: 1px 1px 3px 2px rgba(29, 29, 144, 0.424);
 }
 .info {
