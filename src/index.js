@@ -52,6 +52,11 @@ async function onFormElSubmit(e) {
 
       loadMoreBtnEl.classList.remove('is-hidden');
     }
+    if (response.totalHits < per_page) {
+        console.log(response.totalHits);
+        console.log(per_page);
+      loadMoreBtnEl.classList.add('is-hidden');
+    }
   } catch (error) {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
@@ -91,7 +96,7 @@ function createMarkup(images) {
         <div class="photo-card">
       <a href="${image.largeImageURL}" class="photo-card-link">
 
-  <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+  <img width='220' height='152' src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
 </a>
 
   <div class="info">
